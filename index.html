@@ -17,7 +17,7 @@
         }
 
         body {
-            background-color: rgb(8, 8, 103);
+            background-color: #ffffff;
             color: white;
         }
 
@@ -38,8 +38,33 @@
             margin: 0 23px;
         }
         .left{
-            font-size: 2rem ;
+            font-size: 1.5rem ;
         }
+        .underline-on-hover {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  /* Create the underline using a pseudo-element */
+  .underline-on-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e9e9e9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out; /* Adjust duration for speed */
+  }
+
+  /* Change transform to reveal the underline on hover */
+  .underline-on-hover:hover::after {
+    transform: scaleX(1);
+  }
     </style>
 </head>
 
@@ -49,15 +74,26 @@
             <div class="left">Yashwant Yadav portfolio </div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li class="underline-on-hover">Home</li>
+                    <li class="underline-on-hover">About</li>
+                    <li class="underline-on-hover">Services</li>
+                    <li class="underline-on-hover">Projects</li>
+                    <li class="underline-on-hover">Contact Me</li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <main>
+        <section class="first">
+            <div class="leftsection">
+                left
+
+            </div>
+
+            
+        </section>
+    </main>
 
 </body> 
 
