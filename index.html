@@ -37,6 +37,20 @@
             list-style: none;
             margin: 0 23px;
         }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+        main hr{
+            border: 0;
+            background:#9c97f1 ;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
         .left{
             font-size: 1.5rem ;
         }
@@ -68,24 +82,45 @@
   .firstsection {
     display:flex;
     justify-content: space-around;
-    margin: 23px 0;
+    align-items: center;
+    margin: 80px 0;
 
   }
-  .firstsection div{
+  .firstsection > div{
     width: 30%;
   }
   .leftsection{
-    background-color: red;
-
-  }
+  font-size: 3rem;
+   }
   .rightsection img{
     width: 80%;
-    margin: 50px 0;
-     }
+    
+  }
+  .purple{
+    color: rgb(170, 107, 228);
+  }
+  .text-gray{
+    color: gray;
+  }
+  #element{
+    color: rgb(170, 107, 228);
+ }
+ .secondsection{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+ }
+ .secondsection h1{
+    font-size: 1.8rem;
+ }
+ .secondsection box{
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
 
-  
-  
-    </style>
+ }
+   </style>
 </head>
 
 <body>
@@ -94,29 +129,45 @@
             <div class="left">Yashwant Yadav portfolio </div>
             <div class="right">
                 <ul>
-                    <li class="underline-on-hover">Home</li>
-                    <li class="underline-on-hover">About</li>
-                    <li class="underline-on-hover">Services</li>
-                    <li class="underline-on-hover">Projects</li>
-                    <li class="underline-on-hover">Contact Me</li>
+                    <li class="underline-on-hover" ><a href="/">Home </a></li>
+                    <li class="underline-on-hover" ><a href="/">About </a></li>
+                    <li class="underline-on-hover" ><a href="/">Services </a></li>
+                    <li class="underline-on-hover" ><a href="/">Projects </a></li>
+                    <li class="underline-on-hover" ><a href="/">Contact Me </a></li>
                 </ul>
             </div>
-        </nav>
+        </nav><a href="/"></a>
     </header>
 
     <main>
         <section class="firstsection">
             <div class="leftsection">
-                Hi , My name is Yashwant Yadav
-                <div>and I am a web Developer</div>
+                Hi , My name is <span class="purple">Yashwant Yadav</span>
+                <div>and I am a passionate</div>
+                <!-- Element to contain animated typing -->
+                 <span id="element"></span>
             </div>
             <div class="rightsection">
                 <img src="bg.png.jpg" alt="">
             </div>
 
             
+        </section> 
+        <hr>
+
+        <section class="secondsection"> 
+            <span class="text-gray">What i have done so far </span>
+            <h1> Work Experience </h1>
         </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer','Fracer' ],
+      typeSpeed: 50,
+    });
+  </script>
 
 </body> 
 
